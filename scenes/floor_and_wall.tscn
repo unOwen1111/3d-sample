@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://5jnwn7sjdsmg"]
+
+[ext_resource type="PackedScene" uid="uid://0x4wndd6y1hv" path="res://scenes/floor_only.tscn" id="2_po6m3"]
+[ext_resource type="Texture2D" uid="uid://vx4cv6s0qh2e" path="res://assets/brick_wall.png" id="2_wqup8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fs11"]
+albedo_texture = ExtResource("2_wqup8")
+
+[sub_resource type="BoxMesh" id="BoxMesh_1lxrf"]
+material = SubResource("StandardMaterial3D_4fs11")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mg0ke"]
+
+[node name="FloorAndWall" type="Node3D" unique_id=1052402660]
+
+[node name="Wall1" type="StaticBody3D" parent="." unique_id=412142388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall1" unique_id=284085828]
+mesh = SubResource("BoxMesh_1lxrf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall1" unique_id=1801539908]
+shape = SubResource("BoxShape3D_mg0ke")
+
+[node name="Wall2" type="StaticBody3D" parent="." unique_id=597238558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2" unique_id=1710529287]
+mesh = SubResource("BoxMesh_1lxrf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2" unique_id=363694217]
+shape = SubResource("BoxShape3D_mg0ke")
+
+[node name="FloorOnly" parent="." unique_id=1578626416 instance=ExtResource("2_po6m3")]

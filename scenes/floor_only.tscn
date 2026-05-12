@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://0x4wndd6y1hv"]
+
+[ext_resource type="Texture2D" uid="uid://6re84apyxi2j" path="res://assets/stone_floor.png" id="1_tun7t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ekhb2"]
+albedo_texture = ExtResource("1_tun7t")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ca1le"]
+material = SubResource("StandardMaterial3D_ekhb2")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mg0ke"]
+
+[node name="FloorOnly" type="Node3D" unique_id=1052402660]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=272222282]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=331531746]
+mesh = SubResource("BoxMesh_ca1le")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=313483185]
+shape = SubResource("BoxShape3D_mg0ke")

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c3uv3dhqgcuf1"]
+
+[ext_resource type="Script" uid="uid://c02uedulbb0bc" path="res://scripts/player.gd" id="1_ok7op"]
+[ext_resource type="PackedScene" uid="uid://0x4wndd6y1hv" path="res://scenes/floor_only.tscn" id="2_ok7op"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1bvp3"]
+radius = 0.25
+height = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
+albedo_color = Color(0, 0.5019608, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_lquwl"]
+material = SubResource("StandardMaterial3D_1bvp3")
+radius = 0.25
+height = 0.5
+radial_segments = 63
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+albedo_color = Color(0.33333334, 0.5019608, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5vw27"]
+material = SubResource("StandardMaterial3D_272bh")
+top_radius = 0.25
+bottom_radius = 0.15
+height = 1.0
+
+[node name="FloorAndPlayer" type="Node3D" unique_id=1549931205]
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=726633699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 3
+script = ExtResource("1_ok7op")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1354251281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("CapsuleShape3D_1bvp3")
+
+[node name="Head" type="Node3D" parent="Player" unique_id=617963957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="HeadMesh" type="MeshInstance3D" parent="Player/Head" unique_id=201099904]
+visible = false
+mesh = SubResource("SphereMesh_lquwl")
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=2087439485]
+
+[node name="Body" type="Node3D" parent="Player" unique_id=257838261]
+
+[node name="BodyMesh" type="MeshInstance3D" parent="Player/Body" unique_id=1182402986]
+visible = false
+mesh = SubResource("CylinderMesh_5vw27")
+
+[node name="FloorOnly" parent="." unique_id=1052402660 instance=ExtResource("2_ok7op")]

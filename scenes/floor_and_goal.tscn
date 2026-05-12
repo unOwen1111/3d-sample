@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://784ha3x2unbh"]
+
+[ext_resource type="Script" uid="uid://5ne3k5iwo7q0" path="res://scripts/flag.gd" id="1_jyx8w"]
+[ext_resource type="PackedScene" uid="uid://0x4wndd6y1hv" path="res://scenes/floor_only.tscn" id="1_xw4or"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyx8w"]
+albedo_color = Color(1, 0.37254903, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ski05"]
+material = SubResource("StandardMaterial3D_jyx8w")
+top_radius = 0.02
+bottom_radius = 0.02
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8nuk"]
+albedo_color = Color(1, 0.37254903, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0vwvw"]
+material = SubResource("StandardMaterial3D_g8nuk")
+top_radius = 0.02
+bottom_radius = 0.25
+height = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ni8s2"]
+albedo_color = Color(0.78431374, 0.23529412, 0.23529412, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g6ss0"]
+material = SubResource("StandardMaterial3D_ni8s2")
+size = Vector3(0.3, 0.3, 0.02)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xw4or"]
+
+[node name="FloorAndGoal" type="Node3D" unique_id=451856933]
+
+[node name="Flag" type="Area3D" parent="." unique_id=1298955309]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_jyx8w")
+
+[node name="Mesh" type="Node3D" parent="Flag" unique_id=881377990]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Flag/Mesh" unique_id=336720351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CylinderMesh_ski05")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Flag/Mesh" unique_id=358463595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
+mesh = SubResource("CylinderMesh_0vwvw")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Flag/Mesh" unique_id=582385287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 1.35, 0)
+mesh = SubResource("BoxMesh_g6ss0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Flag" unique_id=914463985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_xw4or")
+
+[node name="FloorOnly" parent="." unique_id=1052402660 instance=ExtResource("1_xw4or")]
+
+[connection signal="body_entered" from="Flag" to="Flag" method="_on_body_entered"]

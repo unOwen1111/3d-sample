@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://coiyxvfqg8f7h"]
+
+[ext_resource type="PackedScene" uid="uid://5jnwn7sjdsmg" path="res://scenes/floor_and_wall.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c3uv3dhqgcuf1" path="res://scenes/floor_and_player.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://0x4wndd6y1hv" path="res://scenes/floor_only.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://784ha3x2unbh" path="res://scenes/floor_and_goal.tscn" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://cx1tf5h855vpi" path="res://scripts/hud.gd" id="4_lquwl"]
+
+[sub_resource type="Environment" id="Environment_1bvp3"]
+
+[node name="Main" type="Node3D" unique_id=147820603]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2067590261]
+transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 4, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1698353076]
+environment = SubResource("Environment_1bvp3")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=784810157 groups=["hud"]]
+script = ExtResource("4_lquwl")
+
+[node name="GoalLabel" type="Label" parent="HUD" unique_id=1733064441]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -34.5
+offset_right = 81.5
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.627451, 0.19607843, 1)
+theme_override_font_sizes/font_size = 50
+text = "GOAL ! おめでとう！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Maze" type="Node3D" parent="." unique_id=1401788385]
+
+[node name="FloorAndWall_0_0" parent="Maze" unique_id=1711537256 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="FloorAndWall_0_1" parent="Maze" unique_id=722799159 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="FloorAndWall_0_2" parent="Maze" unique_id=1052402660 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(0.9999568, 0.0019171336, -0.009096765, -0.0019111345, 0.999998, 0.00066782604, 0.009098028, -0.0006504039, 0.9999584, 0, 0, -1)
+
+[node name="FloorAndWall_0_3" parent="Maze" unique_id=181394246 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="FloorAndWall_0_4" parent="Maze" unique_id=1662721502 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="FloorAndWall_1_0" parent="Maze" unique_id=153184807 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="FloorOnly_1_1" parent="Maze" unique_id=1454237015 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(0.9999722, -0.007452487, 0, 0.007452487, 0.9999722, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="FloorAndPlayer_1_2" parent="Maze" unique_id=1549931205 instance=ExtResource("1_h2yge")]
+
+[node name="FloorOnly_1_3" parent="Maze" unique_id=629737519 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="FloorAndWall_1_4" parent="Maze" unique_id=1650123984 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="FloorAndWall_2_0" parent="Maze" unique_id=265517313 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="FloorAndWall_2_1" parent="Maze" unique_id=1458822798 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="FloorAndWall_2_2" parent="Maze" unique_id=347725795 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="FloorOnly_2_3" parent="Maze" unique_id=2096578131 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="FloorAndWall_2_4" parent="Maze" unique_id=178625522 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="FloorAndWall_3_0" parent="Maze" unique_id=1379923194 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="FloorAndGoa_3_1" parent="Maze" unique_id=451856933 instance=ExtResource("4_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2)
+
+[node name="FloorOnly_3_2" parent="Maze" unique_id=1729848884 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="FloorOnly_3_3" parent="Maze" unique_id=941650056 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+
+[node name="FloorAndWall_3_4" parent="Maze" unique_id=976944540 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="FloorAndWall_4_0" parent="Maze" unique_id=167072328 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="FloorAndWall_4_1" parent="Maze" unique_id=10553693 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+
+[node name="FloorAndWall_4_2" parent="Maze" unique_id=290110438 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="FloorAndWall_4_3" parent="Maze" unique_id=958940630 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+
+[node name="FloorAndWall_4_4" parent="Maze" unique_id=1457140678 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)

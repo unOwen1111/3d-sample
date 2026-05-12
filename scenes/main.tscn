@@ -34,7 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 0.627451, 0.19607843, 1)
 theme_override_font_sizes/font_size = 50
-text = "GOAL ! おめでとう！"
+text = "GOAL ! "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -47,7 +47,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
 
 [node name="FloorAndWall_0_2" parent="Maze" unique_id=1052402660 instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.9999568, 0.0019171336, -0.009096765, -0.0019111345, 0.999998, 0.00066782604, 0.009098028, -0.0006504039, 0.9999584, 0, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
 [node name="FloorAndWall_0_3" parent="Maze" unique_id=181394246 instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
@@ -59,7 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
 [node name="FloorOnly_1_1" parent="Maze" unique_id=1454237015 instance=ExtResource("4_1bvp3")]
-transform = Transform3D(0.9999722, -0.007452487, 0, 0.007452487, 0.9999722, 0, 0, 0, 1, -1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
 
 [node name="FloorAndPlayer_1_2" parent="Maze" unique_id=1549931205 instance=ExtResource("1_h2yge")]
 

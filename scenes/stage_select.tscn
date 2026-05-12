@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://dsf6gcy3ef6ly"]
+
+[ext_resource type="Script" uid="uid://bsfhoqhpr14ih" path="res://scenes/stage_select.gd" id="1_tne6o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6d2h"]
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xntf"]
+bg_color = Color(0.6666667, 0.3529412, 0.019607844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng2yn"]
+bg_color = Color(0.9019608, 0.5882353, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tne6o"]
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2cs7"]
+bg_color = Color(0.6666667, 0.3529412, 0.019607844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_klos3"]
+bg_color = Color(0.9019608, 0.5882353, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3g3k"]
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snphr"]
+bg_color = Color(0.6666667, 0.3529412, 0.019607844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbh0i"]
+bg_color = Color(0.9019608, 0.5882353, 0.25490198, 1)
+
+[node name="StageSelect" type="Control" unique_id=321775089]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tne6o")
+
+[node name="BG" type="ColorRect" parent="." unique_id=1337819310]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=842233910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleBar" type="MarginContainer" parent="MainLayout" unique_id=885291131]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="StageSelect" type="Label" parent="MainLayout/TitleBar" unique_id=1981669636]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.23529412, 0.49019608, 0.5294118, 1)
+theme_override_font_sizes/font_size = 60
+text = "Stage Select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StageSelectLayout" type="HBoxContainer" parent="MainLayout" unique_id=2095337917]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PreviousStagePanel" type="MarginContainer" parent="MainLayout/StageSelectLayout" unique_id=1428520873]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PrevButton" type="Button" parent="MainLayout/StageSelectLayout/PreviousStagePanel" unique_id=1918776295]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.49019608, 0.49019608, 0.49019608, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6d2h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8xntf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ng2yn")
+text = "←"
+
+[node name="StagePreviewPanel" type="MarginContainer" parent="MainLayout/StageSelectLayout" unique_id=1587454691]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 30
+
+[node name="BG" type="ColorRect" parent="MainLayout/StageSelectLayout/StagePreviewPanel" unique_id=1438329103]
+layout_mode = 2
+color = Color(0.25490198, 0.25490198, 0.25490198, 1)
+
+[node name="StageSelect" type="Label" parent="MainLayout/StageSelectLayout/StagePreviewPanel" unique_id=1942314202]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.49019608, 0.49019608, 0.49019608, 1)
+theme_override_font_sizes/font_size = 60
+text = "Stage
+NO: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextStagePanel" type="MarginContainer" parent="MainLayout/StageSelectLayout" unique_id=1144897523]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 10
+
+[node name="NextButton" type="Button" parent="MainLayout/StageSelectLayout/NextStagePanel" unique_id=1506665990]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.49019608, 0.49019608, 0.49019608, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_tne6o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p2cs7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_klos3")
+text = "→"
+
+[node name="StartActionBar" type="MarginContainer" parent="MainLayout" unique_id=1370953412]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="MainLayout/StartActionBar" unique_id=1038221857]
+custom_minimum_size = Vector2(180, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.49019608, 0.49019608, 0.49019608, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_o3g3k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_snphr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nbh0i")
+text = "Start !"
+
+[connection signal="pressed" from="MainLayout/StageSelectLayout/PreviousStagePanel/PrevButton" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="MainLayout/StageSelectLayout/NextStagePanel/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="MainLayout/StartActionBar/StartButton" to="." method="_on_start_button_pressed"]

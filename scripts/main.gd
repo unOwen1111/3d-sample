@@ -6,6 +6,7 @@ var floor_only_scene = preload("res://scenes/floor_only.tscn")
 var floor_and_wall_scene = preload("res://scenes/floor_and_wall.tscn")
 var floor_and_player_scene = preload("res://scenes/floor_and_player.tscn")
 var floor_and_goal_scene = preload("res://scenes/floor_and_goal.tscn")
+var debug_block_scene = preload("res://scenes/debug_block.tscn")
 
 @onready var cleaar_screen: Control = $CanvasLayer/ClearScreen
 @onready var blocks: Node3D = $Blocks
@@ -13,6 +14,11 @@ var floor_and_goal_scene = preload("res://scenes/floor_and_goal.tscn")
 func _ready() -> void:
 	load_maze_from_csv(Global.stage_files[stage_no])
 	create_maze()
+
+
+func _input(event: InputEvent) -> void:
+	if Input.is_key_pressed(KEY_P):
+		get_tree().call_group("debug_blocks", "change_texture")
 
 func load_maze_from_csv(path: String) -> void:
 	
@@ -53,6 +59,10 @@ func create_maze() -> void:
 					var floor_and_goal = floor_and_goal_scene.instantiate()
 					floor_and_goal.position = cell_position
 					blocks.add_child(floor_and_goal)
+				Global.BlockPattern.DEBUG_BLOCK:
+					var debug_block = debug_block_scene.instantiate()
+					debug_block.position = cell_position
+					blocks.add_child(debug_block)
 					
 func show_cleaar_screen() -> void:
 	cleaar_screen.visible = true

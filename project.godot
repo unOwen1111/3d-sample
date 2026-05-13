@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Global="*uid://cq6wa7xsm0ypt"
 
+[global_group]
+
+debug_blocks=""
+
 [input]
 
 move_forward={

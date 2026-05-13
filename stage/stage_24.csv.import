@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://co3qpuyr4vb02"
+
+[deps]
+
+files=["res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation"]
+
+source_file="res://stage/stage_24.csv"
+dest_files=["res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation", "res://stage/stage_24.1.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

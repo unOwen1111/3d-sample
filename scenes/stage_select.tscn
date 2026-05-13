@@ -82,11 +82,11 @@ theme_override_constants/margin_bottom = 10
 [node name="PrevButton" type="Button" parent="MainLayout/StageSelectLayout/PreviousStagePanel" unique_id=1918776295]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.49019608, 0.49019608, 0.49019608, 1)
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_r6d2h")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8xntf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ng2yn")
-text = "←"
+text = "prev"
 
 [node name="StagePreviewPanel" type="MarginContainer" parent="MainLayout/StageSelectLayout" unique_id=1587454691]
 layout_mode = 2
@@ -119,11 +119,11 @@ theme_override_constants/margin_bottom = 10
 [node name="NextButton" type="Button" parent="MainLayout/StageSelectLayout/NextStagePanel" unique_id=1506665990]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.49019608, 0.49019608, 0.49019608, 1)
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_tne6o")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_p2cs7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_klos3")
-text = "→"
+text = "next"
 
 [node name="StartActionBar" type="MarginContainer" parent="MainLayout" unique_id=1370953412]
 custom_minimum_size = Vector2(0, 120)

@@ -16,7 +16,6 @@ environment = SubResource("Environment_1bvp3")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=784810157]
 
 [node name="ClearScreen" type="Control" parent="CanvasLayer" unique_id=1614362698]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

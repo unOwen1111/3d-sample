@@ -24,6 +24,7 @@ func load_maze_from_csv(path: String) -> void:
 	
 	var file := FileAccess.open(path, FileAccess.READ)
 	if file == null:
+		$CanvasLayer/ClearScreen/GoalLabel.text = "CSVを開けません: " + path
 		push_error("CSVを開けません: " + path)
 		return
 

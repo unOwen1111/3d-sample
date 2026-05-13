@@ -20,4 +20,4 @@ func _ready() -> void:
 
 func load_stage_files() -> void:
 	for i in range(30):
-		stage_files.append("res://stage/stage_%s.csv" % str(i).pad_zeros(2))
+		stage_files.append("res://stage/stage_%s.txt" % str(i).pad_zeros(2))

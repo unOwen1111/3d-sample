@@ -19,18 +19,5 @@ func _ready() -> void:
 
 
 func load_stage_files() -> void:
-	var dir := DirAccess.open(stage_folder_path)
-	if dir == null:
-		push_error("フォルダを開けません: " + stage_folder_path)
-		return
-
-	dir.list_dir_begin()
-	var file_name := dir.get_next()
-
-	while file_name != "":
-		if file_name.get_extension() == "csv":
-			stage_files.append(stage_folder_path.path_join(file_name))
-
-		file_name = dir.get_next()
-
-	dir.list_dir_end()
+	for i in range(30):
+		stage_files.append("res://stage/stage_%s.csv" % str(i).pad_zeros(2))
